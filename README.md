@@ -21,7 +21,7 @@ y permite visualizarlos y buscarlos por consola.
 
 1. Clona el repositorio o descarga el proyecto.
 2. Abre el proyecto en IntelliJ IDEA.
-3. Ejecuta la clase principal `Main.java`.
+3. Ejecuta la clase principal `ui.Main.java`.
 4. El programa mostrará todos los tours, filtrará los culturales y pedirá un nombre para buscar.
 
 ## Tecnologías
