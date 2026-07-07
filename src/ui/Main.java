@@ -6,6 +6,7 @@ import model.ServicioTuristico;
 import model.Tour;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -45,15 +46,15 @@ public class Main {
             System.out.println("No se encontró ningún tour con ese nombre.");
         }
 
-        System.out.println("\n=== SERVICIOS TURÍSTICOS (HERENCIA) ===");
+        System.out.println("\n=== SERVICIOS TURÍSTICOS (POLIMORFISMO) ===");
 
         GestorServicios gestorServicios = new GestorServicios();
 
-        ServicioTuristico[] servicios = gestorServicios.obtenerServicios();
+        List<ServicioTuristico> servicios = gestorServicios.obtenerServicios();
 
         for (ServicioTuristico servicio : servicios) {
-            System.out.println(servicio);
-            System.out.println("---------------------------");
+            servicio.mostrarInformacion();
+            System.out.println();
         }
 
         scanner.close();

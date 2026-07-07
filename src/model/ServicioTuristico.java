@@ -29,6 +29,12 @@ public class ServicioTuristico {
         this.duracionHoras = duracionHoras;
     }
 
+    // Método que será sobrescrito por las subclases
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Duración: " + duracionHoras + " horas");
+    }
+
     // Método toString
     @Override
     public String toString() {

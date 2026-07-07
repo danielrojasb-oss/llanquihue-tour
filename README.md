@@ -1,29 +1,67 @@
 # LlanquihueTourApp
 
+Aplicación Java desarrollada para gestionar información de tours y servicios turísticos utilizando Programación Orientada a Objetos.
+
 ## Descripción
-Sistema de gestión de tours para la agencia Llanquihue Tour, ubicada en la Región de Los Lagos.
-La aplicación carga tours desde un archivo externo, los almacena en una colección dinámica
-y permite visualizarlos y buscarlos por consola.
 
-## Paquetes y clases implementadas
+Durante las semanas anteriores, el proyecto permitió leer información de tours desde un archivo de texto (`tours.txt`) y realizar búsquedas y filtros.
 
-- **model**: Contiene las clases del dominio.
-    - `Tour.java`: Clase principal con atributos, constructores, getters/setters y toString().
-    - `Guia.java`: Clase relacionada con Tour mediante composición.
+En esta versión se incorporaron nuevos conceptos de Programación Orientada a Objetos:
 
-- **data**: Contiene la lógica de carga de datos.
-    - `GestorDatos.java`: Lee el archivo tours.txt y carga los objetos en un ArrayList.
+- Herencia mediante la clase `ServicioTuristico`.
+- Sobrescritura (`@Override`) del método `mostrarInformacion()`.
+- Polimorfismo utilizando referencias de tipo `ServicioTuristico`.
+- Uso de colecciones genéricas (`List<ServicioTuristico>`) para almacenar y recorrer diferentes tipos de servicios turísticos.
 
-- **resources**: Contiene los archivos externos.
-    - `tours.txt`: Archivo con los datos de los tours.
+## Funcionalidades
+
+- Leer información de tours desde un archivo de texto.
+- Mostrar todos los tours disponibles.
+- Filtrar tours por tipo.
+- Buscar tours por nombre.
+- Mostrar distintos servicios turísticos aplicando herencia y polimorfismo.
+
+## Estructura del proyecto
+
+```
+src
+├── model
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   ├── ExcursionCultural.java
+│   ├── Tour.java
+│   └── Guia.java
+│
+├── data
+│   ├── GestorDatos.java
+│   └── GestorServicios.java
+│
+└── ui
+    └── Main.java
+
+resources
+└── tours.txt
+```
+
+## Tecnologías utilizadas
+
+- Java 21
+- IntelliJ IDEA
+- Git
+- GitHub
 
 ## Instrucciones para ejecutar
 
 1. Clona el repositorio o descarga el proyecto.
 2. Abre el proyecto en IntelliJ IDEA.
-3. Ejecuta la clase principal `ui.Main.java`.
-4. El programa mostrará todos los tours, filtrará los culturales y pedirá un nombre para buscar.
+3. Ejecuta la clase principal `ui.Main`.
+4. El programa mostrará:
+  - Todos los tours.
+  - Los tours culturales.
+  - La búsqueda por nombre.
+  - Los servicios turísticos utilizando herencia y polimorfismo.
 
-## Tecnologías
-- Java 21
-- IntelliJ IDEA
+## Autor
+
+**Daniela Rojas Báez**

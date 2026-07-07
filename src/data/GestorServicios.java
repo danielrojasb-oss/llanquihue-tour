@@ -5,45 +5,56 @@ import model.PaseoLacustre;
 import model.RutaGastronomica;
 import model.ServicioTuristico;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GestorServicios {
 
-    public ServicioTuristico[] obtenerServicios() {
+    public List<ServicioTuristico> obtenerServicios() {
 
-        ServicioTuristico[] servicios = new ServicioTuristico[6];
+        List<ServicioTuristico> servicios = new ArrayList<>();
 
         // Rutas gastronómicas
-        servicios[0] = new RutaGastronomica(
+        servicios.add(new RutaGastronomica(
                 "Ruta Gastronómica de Puerto Varas",
                 4,
-                5);
+                5));
 
-        servicios[1] = new RutaGastronomica(
+        servicios.add(new RutaGastronomica(
                 "Ruta de Frutillar",
                 3,
-                4);
+                4));
 
         // Paseos lacustres
-        servicios[2] = new PaseoLacustre(
+        servicios.add(new PaseoLacustre(
                 "Paseo por el Lago Llanquihue",
                 2,
-                "Catamarán");
+                "Catamarán"));
 
-        servicios[3] = new PaseoLacustre(
+        servicios.add(new PaseoLacustre(
                 "Navegación Lago Todos los Santos",
                 3,
-                "Lancha");
+                "Lancha"));
 
         // Excursiones culturales
-        servicios[4] = new ExcursionCultural(
+        servicios.add(new ExcursionCultural(
                 "Museo Pablo Fierro",
                 2,
-                "Museo Pablo Fierro");
+                "Museo Pablo Fierro"));
 
-        servicios[5] = new ExcursionCultural(
+        servicios.add(new ExcursionCultural(
                 "Fuerte San Antonio",
                 3,
-                "Fuerte San Antonio");
+                "Fuerte San Antonio"));
 
         return servicios;
+    }
+
+    public void mostrarServicios() {
+
+        for (ServicioTuristico servicio : obtenerServicios()) {
+            servicio.mostrarInformacion();
+            System.out.println();
+        }
     }
 }
